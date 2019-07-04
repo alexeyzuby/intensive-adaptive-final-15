@@ -1,0 +1,249 @@
+.upload {
+  @include breakpoint-up(desktop) {
+    padding-bottom: 30px;
+  }
+}
+
+.upload__slogan {
+  padding: 40px 0 70px;
+  text-align: center;
+
+  @include breakpoint-up(tablet) {
+    padding: 66px 0 70px;
+  }
+
+  @include breakpoint-up(desktop) {
+    padding: 60px 0 65px;
+  }
+
+  p {
+    margin: 0;
+    line-height: 30px;
+
+    @include breakpoint-up(tablet) {
+      font-size: 18px;
+    }
+  }
+}
+
+.upload__form {
+  background-color: #f2f2f2;
+
+  @include breakpoint-down(tablet) {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+
+  @include breakpoint-up(tablet) {
+    display: flex;
+    padding: 55px 20px;
+  }
+
+  @include breakpoint-up(desktop) {
+    justify-content: space-between;
+    padding: 55px 60px 55px 80px;
+  }
+}
+
+.upload__image {
+  @include breakpoint-only(mobile) {
+    padding: 20px;
+  }
+
+  @include breakpoint-up(tablet) {
+    width: 50%;
+    padding-right: 10px;
+  }
+
+  @include breakpoint-up(desktop) {
+    width: 310px;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.upload__settings {
+  @include breakpoint-up(tablet) {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-top: -12px;
+    padding-left: 30px;
+  }
+
+  @include breakpoint-up(desktop) {
+    width: 410px;
+    padding-left: 0;
+  }
+}
+
+.upload__processing {
+  @include breakpoint-only(mobile) {
+    padding: 20px;
+  }
+}
+
+.upload__tabs {
+  @include list-reset();
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 28px;
+
+  @include breakpoint-up(tablet) {
+    display: none;
+  }
+}
+
+.upload__tab {
+  margin: 0 18px;
+
+  svg {
+    opacity: 0.3;
+    fill: $color-blue;
+  }
+
+  a:hover svg {
+    opacity: 0.5;
+  }
+}
+
+.upload__tab--active {
+  svg {
+    fill: $color-pink;
+    opacity: 1;
+  }
+
+  a:hover svg {
+    opacity: 1;
+  }
+}
+
+.upload__content {
+  @include list-reset();
+}
+
+.upload__box {
+  position: relative;
+
+  @include breakpoint-only(mobile) {
+    display: none;
+    padding: 0 20px;
+  }
+
+  @include breakpoint-up(tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 20px 25px 0;
+    border-bottom: 1px solid #dddfe0;
+  }
+
+  @include breakpoint-up(desktop) {
+    padding: 25px 30px 25px 0;
+  }
+
+  svg {
+    fill: $color-pink;
+
+    @include breakpoint-only(mobile) {
+      display: none;
+    }
+  }
+
+  &--crop svg {
+    width: 22px;
+    height: 22px;
+
+    @include breakpoint-up(desktop) {
+      width: 44px;
+      height: 44px;
+    }
+  }
+
+  &--fill svg {
+    width: 24px;
+    height: 22px;
+
+    @include breakpoint-up(desktop) {
+      width: 48px;
+      height: 43px;
+    }
+  }
+
+  &--contrast svg {
+    width: 16px;
+    height: 16px;
+
+    @include breakpoint-up(desktop) {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  &--active {
+    display: block;
+  }
+
+  .range {
+    @include breakpoint-up(tablet) {
+      margin-left: 30px;
+      width: 200px;
+    }
+
+    @include breakpoint-up(desktop) {
+      width: 290px;
+    }
+  }
+}
+
+.upload__box.upload__box--active {
+  @include breakpoint-only(mobile) {
+    display: block;
+  }
+}
+
+.upload__buttons {
+  @include breakpoint-only(mobile) {
+    margin-top: 5px;
+    padding: 37px 20px 43px;
+    border-top: 1px solid #dddfe0;
+  }
+
+  @include breakpoint-up(tablet) {
+    margin-top: auto;
+  }
+
+  @include breakpoint-up(desktop) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  button {
+    display: block;
+    width: 100%;
+
+    @include breakpoint-only(mobile) {
+      margin-top: 10px;
+    }
+
+    @include breakpoint-only(tablet) {
+      margin-top: 22px;
+    }
+
+    @include breakpoint-down(tablet) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @include breakpoint-up(desktop) {
+      max-width: 180px;
+    }
+
+    &:first-child {
+      margin: 0;
+    }
+  }
+}

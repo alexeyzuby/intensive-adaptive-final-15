@@ -1,0 +1,54 @@
+html {
+  box-sizing: border-box;
+}
+
+* {
+  &,
+  &::before,
+  &::after {
+    box-sizing: inherit;
+  }
+}
+
+body {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 14px;
+  color: $color-blue;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  padding: 0 20px;
+
+  @include breakpoint-up(tablet) {
+    max-width: 660px;
+    margin: 0 auto;
+  }
+
+  @include breakpoint-up(desktop) {
+    max-width: 960px;
+    padding: 0 10px;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

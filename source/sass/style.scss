@@ -1,0 +1,33 @@
+@import "variables";
+@import "mixins/breakpoints";
+@import "mixins/list-reset";
+
+/** FOUNDATION */
+@import "foundation/normalize";
+@import "foundation/fonts";
+@import "foundation/base";
+
+/** LAYOUTS */
+@import "layouts/header";
+@import "layouts/footer";
+
+/** COMPONENTS */
+@import "components/slider";
+@import "components/range";
+@import "components/social-links";
+@import "components/buttons";
+
+/** BLOCKS */
+@import "blocks/main-nav";
+@import "blocks/download";
+@import "blocks/promo";
+@import "blocks/features";
+@import "blocks/effect";
+@import "blocks/reviews";
+@import "blocks/price";
+@import "blocks/contacts";
+@import "blocks/gallery";
+@import "blocks/upload";
+@import "blocks/form";
+@import "blocks/map";
+@import "blocks/modal";

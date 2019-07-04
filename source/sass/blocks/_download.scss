@@ -1,0 +1,163 @@
+.download {
+  position: relative;
+  text-align: center;
+  color: #ffffff;
+
+  @include breakpoint-only(mobile) {
+    margin-top: 395px;
+    background-color: #1d2631;
+  }
+
+  @include breakpoint-up(tablet) {
+    overflow: hidden;
+  }
+}
+
+.download__wrap {
+  position: relative;
+
+  @include breakpoint-up(tablet) {
+    max-width: 300px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    background-size: cover;
+
+    @include breakpoint-only(mobile) {
+      left: -20px;
+      top: -286px;
+      width: 258px;
+      height: 286px;
+      background-image: url("../img/iphone-hand-mobile@1x.png");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/iphone-hand-mobile@2x.png");
+      }
+    }
+
+    @include breakpoint-up(tablet) {
+      bottom: 0;
+      right: -360px;
+      width: 700px;
+      height: 545px;
+      background-image: url("../img/iphone-hand-tablet@1x.png");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/iphone-hand-tablet@2x.png");
+      }
+    }
+
+    @include breakpoint-up(desktop) {
+      right: -765px;
+      width: 1050px;
+      height: 645px;
+      background-image: url("../img/iphone-hand-desktop@1x.png");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/iphone-hand-desktop@2x.png");
+      }
+    }
+  }
+}
+
+.download__content {
+  padding: 30px 0;
+
+  @include breakpoint-up(tablet) {
+    position: relative;
+    z-index: 2;
+    padding: 94px 0 108px;
+  }
+
+  @include breakpoint-up(desktop) {
+    padding: 108px 0 121px;
+  }
+}
+
+.download__slogan {
+  @include breakpoint-only(mobile) {
+    display: none;
+  }
+
+  @include breakpoint-up(tablet) {
+    margin: 0 auto 30px;
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 300;
+  }
+
+  @include breakpoint-only(tablet) {
+    max-width: 225px;
+  }
+
+  @include breakpoint-up(desktop) {
+    margin: 0 0 52px;
+    font-size: 50px;
+    line-height: 60px;
+  }
+}
+
+.download__link {
+  color: #ffffff;
+  border: 3px solid #ffffff;
+
+  @include breakpoint-up(desktop) {
+    font-size: 21px;
+  }
+
+  &:hover {
+    background-color: #ffffff;
+    color: $color-pink;
+  }
+
+  &:active span {
+    opacity: 0.3;
+  }
+}
+
+.download__platforms {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin: 30px 0 0;
+  padding: 0;
+  list-style: none;
+
+  @include breakpoint-up(tablet) {
+    margin-top: 45px;
+  }
+
+  @include breakpoint-up(desktop) {
+    margin-top: 65px;
+  }
+
+  li {
+    margin: 0 18px;
+  }
+
+  a {
+    display: block;
+  }
+
+  svg {
+    vertical-align: middle;
+  }
+}
+
+.download__tip {
+  margin: 23px 0 0;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 300;
+
+  @include breakpoint-up(tablet) {
+    margin-top: 37px;
+    font-size: 18px;
+  }
+
+  @include breakpoint-up(desktop) {
+    margin-top: 58px;
+  }
+}

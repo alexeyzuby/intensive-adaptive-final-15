@@ -1,0 +1,68 @@
+.slider__arrows {
+  text-align: center;
+}
+
+.slider__arrow {
+  position: absolute;
+  content: "";
+  top: 50%;
+  width: 22px;
+  height: 41px;
+  margin-top: -10px;
+  font-size: 0;
+  background-color: transparent;
+  border: none;
+  opacity: 0.3;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
+
+  &--prev {
+    left: 0;
+    background-image: url("../img/icon-review-arrow-left.svg");
+  }
+
+  &--next {
+    right: 0;
+    background-image: url("../img/icon-review-arrow-right.svg");
+  }
+}
+
+.slider__dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider__dot {
+  font-size: 0;
+  width: 6px;
+  height: 6px;
+  margin: 0 6px;
+  padding: 0;
+  box-sizing: content-box;
+  background-color: $color-blue;
+  opacity: 0.3;
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+
+  &:not(.slider__dot--active):hover {
+    opacity: 0.6;
+  }
+
+  &:not(.slider__dot--active):active {
+    opacity: 0.1;
+  }
+
+  &--active {
+    background-color: #ffffff;
+    border-color: $color-blue;
+    opacity: 1;
+  }
+}

@@ -1,0 +1,35 @@
+.promo {
+  padding: 40px 0 30px;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 300;
+  text-align: center;
+
+  @include breakpoint-up(tablet) {
+    padding: 50px 0;
+  }
+
+  @include breakpoint-up(desktop) {
+    padding: 68px 0;
+  }
+
+  p {
+    margin: 0;
+
+    @include breakpoint-up(tablet) {
+      font-size: 40px;
+      line-height: 48px;
+    }
+
+    @include breakpoint-up(desktop) {
+      font-size: 50px;
+      line-height: 60px;
+    }
+  }
+
+  p + p {
+    @include breakpoint-only(mobile) {
+      margin-top: 30px;
+    }
+  }
+}

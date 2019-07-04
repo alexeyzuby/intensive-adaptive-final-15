@@ -1,0 +1,32 @@
+.social-links {
+  @include list-reset();
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-links__item {
+  margin: 0 7px;
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border: 3px solid #e9ebec;
+    border-radius: 50%;
+  }
+
+  a:hover {
+    border-color: $color-blue;
+  }
+
+  a:active {
+    opacity: 0.3;
+  }
+
+  svg {
+    fill: $color-pink;
+  }
+}
